@@ -21,4 +21,6 @@ my $state = {
   tab_count   => $tabcount,
 };
 
-path(q{/Users/rjbs/Dropbox/data/tab-count.json})->spew( encode_json($state) );
+path(q{/Users/rjbs/Dropbox/data/tab-count.json})->spew(
+  encode_json($state) . "\n"
+);
