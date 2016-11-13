@@ -22,5 +22,5 @@ my $state = {
 };
 
 path(q{/Users/rjbs/Dropbox/data/tab-count.json})->spew(
-  encode_json($state) . "\n"
+  JSON->new->canonical->utf8->encode($state) . "\n"
 );
